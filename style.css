@@ -1,0 +1,142 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #f5abc9;
+    color: gray;
+}
+
+.card{
+    border: none !important;
+}
+.line{
+    width: 30%;
+    border: 2px solid red ;
+
+}
+.center{
+    resize: none;
+    height: 100px;
+}
+form{
+   
+    padding: 5px;
+}
+footer{
+    background: black;
+    margin-top: 10px;
+}
+.follow{
+    display: flex;
+    flex-direction: column;
+    
+}
+.anchor ul li{
+    list-style: none;
+    text-decoration: none;
+}
+.anchor ul li a{
+    float: right;
+}
+.form_deg{
+    padding: 200px;
+}
+label{
+    display: inline-block;
+    color: skyblue;
+    width: 100px;
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  
+}
+.form_login{
+    background: black;
+    width: 400px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.title_deg{
+    background: blue;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    width: 400px;
+    padding: 18px;
+    font-size: 20px;
+}
+.loginMessage{
+    color: red;
+}/* 
+.formcontrol{
+    width: 80%;
+    border-radius: 5px;
+} */
+
+.get
+{background: #f0f2f5;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+
+}
+
+.get label{
+    width: 14px;
+}
+.get input{
+    width: 100%;
+    background: transparent;
+    padding: 8px;
+    outline: none;
+    border: 0;
+}
+
+.get textarea{
+    width: 100%;
+    background: transparent;
+    padding: 8px;
+    outline: none;
+    border: 0;
+}
+
+
+
+Additional CSS codes
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #ececec;
+}
+/*------------ Login container ------------*/
+.box-area{
+    width: 930px;
+}
+/*------------ Right box ------------*/
+.right-box{
+    padding: 40px 30px 40px 40px;
+}
+/*------------ Custom Placeholder ------------*/
+::placeholder{
+    font-size: 16px;
+}
+.rounded-4{
+    border-radius: 20px;
+}
+.rounded-5{
+    border-radius: 30px;
+}
+/*------------ For small screens------------*/
+@media only screen and (max-width: 768px){
+     .box-area{
+        margin: 0 10px;
+     }
+     .left-box{
+        height: 100px;
+     }
+
+    }
+
+     
