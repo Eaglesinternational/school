@@ -51,7 +51,7 @@ include('navbar.php');
                 ?>
                 </h4>
                 </div>
-                <form action="check_login.php" method="POST" >             
+                <form action="login_check.php" method="POST" >             
                     <div class="input-group mb-3">
                     <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Your name" name="username" value="<?php echo htmlspecialchars($name); ?>">
                 </div>

@@ -83,6 +83,7 @@ $result = mysqli_query($data, $sql);
                         <td><?php echo "{$info['password']}"; ?></td>
                         <td> <?php echo "<a  href='update_student.php?student_id={$info['id']}' class='btn btn-primary'>" ?>Update</a></td>
                         <td> <?php echo "<a onClick=\"javascript:return confirm('Are you sure to delete?');\" href='delete.php?student_id={$info['id']}' class='btn btn-danger'>" ?>Delete</a></td>
+                        <td> <?php echo "<a  href='add_student_result.php?student_id={$info['id']}' class='btn btn-primary'>" ?>Add Result</a></td>
                         <!-- <td>2011/04/25</td>
                         <td>$320,800</td> -->
                       </tr>

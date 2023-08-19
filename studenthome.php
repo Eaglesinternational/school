@@ -5,9 +5,13 @@
     <style>
         /* Your CSS styles here */
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
+
+
     <?php
+
     session_start();
     $name = $_SESSION['username'];
 
@@ -42,19 +46,24 @@
 <main class="mt-5 pt-3">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-12">
+          <!-- <div class="col-md-12">
             <h4>Students Info</h4>
-          </div>
+          </div> -->
         </div>
-    <h1>Welcome, <?php echo $name; ?></h1>
-    <h2>Your Results:</h2>
-    <h1>Welcome, <?php echo $name; ?></h1>
-    <a href="logout.php">Logout</a>
+        <div id="containe">
+        <h1 class="text-center">INTERNATIONAL MODEL SCHOOL</h1>
+      <center>  <small class="text-center">C/60 Guinkomey, Cotonou, Benin Republic</small> </center>
+    <!-- <h1>Welcome, <?php echo $name; ?></h1> -->
+    <!-- <h2>Your Results:</h2> -->
+    <h1>Welcome, <?php echo  $_SESSION['username']=$name; ?></h1>
+    <!-- <a href="logout.php">Logout</a> -->
 
     <?php if (mysqli_num_rows($result_result) > 0) { ?>
-        <h2>Your Results:</h2>
+        <!-- <h2>Your Results:</h2> -->
         
-        <table id="results-table" class="table">
+
+       
+    <table id="results-table" class="table">
         <thead>
             <tr>
                 <th>Subject</th>
@@ -78,11 +87,17 @@
             ?>
         </tbody>
         </table>
+        </div>
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+<center>
+<button onclick="download()" class="">Download</button>
+</center>
+
+       <!--  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="js1/bootstrap.min.js"></script>
         <script src="js1/jquery.dataTables.min.js"></script>
-        <script src="js1/dataTables.bootstrap5.min.js"></script>
+        <script src="js1/dataTables.bootstrap5.min.js"></script> -->
 
         <script>
             $(document).ready(function() {
@@ -148,6 +163,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
 
 
+<script type="text/javascript">
+    function download(){
+
+const pdf = document.getElementById("containe");
+
+html2pdf().from(pdf).save();
+
+}
+</script>
     <?php  include("adminfooter.php"); ?>
 
 </body>
