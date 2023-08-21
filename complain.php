@@ -1,13 +1,12 @@
 
 
 <?php
-error_reporting(0);
-session_start();
+
 include('adminheader.php');
 
 include('db_connection.php');
 
-$sql = "SELECT * FROM users WHERE usertype='student'";
+$sql = "SELECT * FROM complain";
 
 $result = mysqli_query($data, $sql);
 
@@ -19,7 +18,7 @@ $result = mysqli_query($data, $sql);
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            <h4>Students Info</h4>
+            <h4>Complain</h4>
           </div>
         </div>
 
@@ -31,36 +30,19 @@ $result = mysqli_query($data, $sql);
                 <span><i class="bi bi-table me-2"></i></span> Data Table
               </div>
               <div class="card-body">
-                <h4 class="text-center text-success">Student Data</h4>
+                <h4 class="text-center text-success">Complain from Students</h4>
                 <div class="table-responsive">
                   <table
                     id="example"
                     class="table table-striped data-table"
                     style="width: 100%"
                   >
-                  <?php
-                  
-                  if($_SESSION['message']){
-
-                    $message3 = $_SESSION['message'];
-                     echo "<script type='text/javascript'> alert($_message3) </script>";
-
-                  }
-                  unset($_SESSION['message']);
-                  
-                  ?>
                     <thead>
                       <tr>
-                        <th>Student_ id</th>
-                        <th>Student_Name</th>
-                        <th>Username</th>
+                        <th>Name</th>
+                        <th>Class</th>
                         <th>Email</th>
-                        <th>Phone</th>
-                        <th>Password</th>
-                        <th>Update</th>
-                        <th>Delete</th>
-                        
-                        <!-- 
+                        <th>Message</th><!-- 
                         <th>Start date</th>
                         <th>Salary</th> -->
                       </tr>
@@ -77,15 +59,10 @@ $result = mysqli_query($data, $sql);
                     
                     ?>
                       <tr>
-                        <td><?php echo "{$info['id']}"; ?></td>
-                        <td><?php echo "{$info['student_name']}"; ?></td>
-                        <td><?php echo "{$info['username']}"; ?></td>
+                        <td><?php echo "{$info['name']}"; ?></td>
+                        <td><?php echo "{$info['class']}"; ?></td>
                         <td><?php echo "{$info['email']}"; ?></td>
-                        <td><?php echo "{$info['phone']}"; ?></td>
-                        <td><?php echo "{$info['password']}"; ?></td>
-                        <td> <?php echo "<a  href='update_student.php?student_id={$info['id']}' class='btn btn-primary'>" ?>Update</a></td>
-                        <td> <?php echo "<a onClick=\"javascript:return confirm('Are you sure to delete?');\" href='delete.php?student_id={$info['id']}' class='btn btn-danger'>" ?>Delete</a></td>
-                        <td> <?php echo "<a  href='add_student_result.php?student_id={$info['id']}' class='btn btn-primary'>" ?>Add Result</a></td>
+                        <td><?php echo "{$info['message']}"; ?></td>
                         <!-- <td>2011/04/25</td>
                         <td>$320,800</td> -->
                       </tr>

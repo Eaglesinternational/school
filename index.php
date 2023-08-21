@@ -33,13 +33,13 @@ if($_SESSION['message1']){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <style>
       body{
     /* margin: 0;
     padding: 0;
     font-family: sans-serif; */
-    background: #f5abc9;
+   /*  background: #f5abc9; */
     
 }
 .image{
@@ -53,7 +53,7 @@ if($_SESSION['message1']){
 <!---------------------------navbar-------------------------------->
 <nav class="navbar navbar-expand-lg bg-primary fixed-top text-primary">
   <div class="container-fluid">
-    <a class="navbar-brand text-light" href="#">Navbar</a>
+    <a class="navbar-brand text-light" href="#">I.M.S</a>
     <button class="navbar-toggler text-light bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -259,21 +259,21 @@ if($_SESSION['message1']){
                     <h3 class="text-center mt-3">Admission Form </h3>
                 </div>
                 <div class="get p-2 m-2">
-                    <label for="">Name</label>
-                    <input type="text" class="form-control" name="name" value="<?php echo htmlspecialchars($name); ?>">
+                   <!--  <label for="">Name</label> -->
+                    <input type="text" class="form-control he" name="name" placeholder="Your name">
                 </div>
                 <div  class="get p-2 m-2">
-                    <label for="">Email</label>
-                    <input type="text" class="form-control" name="email" value="<?php echo htmlspecialchars($email); ?>">
+                    <!-- <label for="">Email</label> -->
+                    <input type="text" class="form-control he" name="email" placeholder="Your Email">
                     
                 </div>
                 <div  class="get p-2 m-2">
-                    <label for="">Phone</label>
-                    <input type="text" class="form-control" name="phone" value="<?php echo htmlspecialchars($phone); ?>">
+                    <!-- <label for="">Phone</label> -->
+                    <input type="text" class="form-control he" name="phone" placeholder="Your Phone number">
                 </div>
                 <div  class="get p-2 m-2">
-                    <label for="">Message</label>
-                    <textarea name="message"  class="form-control center " value="<?php echo htmlspecialchars($message); ?>" ></textarea>
+                    
+                    <textarea name="message"  class="form-control center he" placeholder="Your Message" ></textarea>
                 </div>
                 <div>
                     <center>

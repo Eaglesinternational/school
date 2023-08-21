@@ -203,7 +203,7 @@ elseif($_SESSION['usertype']=='student'){
   <a href="add_student_result.php" class="nav-link px-3">Add Students Results</a>
 </div>
 <div>
-  <a href="" class="nav-link px-3">View Courses</a>
+  <a href="complain.php" class="nav-link px-3">Student's Complain</a>
 </div>
 </nav>
       </div>

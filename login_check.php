@@ -21,14 +21,18 @@ if (isset($_POST['submit'])){
 
     $row = mysqli_fetch_array($result);
 
-        if($row["usertype"] == "student"){
-
-            $_SESSION['username']=$name;
-
-            $_SESSION['usertype']= "student";
-
-            header("Location:studenthome.php");
-        }
+    if ($row["usertype"] == "student") {
+        $_SESSION['username'] = $name;
+        $_SESSION['usertype'] = "student";
+        $_SESSION['userid'] = $row['id']; // Store the user ID
+        $_SESSION['class'] = $row['class']; // Store the user ID
+        $_SESSION['term'] = $row['term']; // Store the user ID
+        $_SESSION['session'] = $row['session']; // Store the user ID
+        $_SESSION['name'] = $row['student_name']; // Store the user ID
+    
+        header("Location: studenthome.php");
+    }
+    
 
         elseif ($row["usertype"]== "admin"){
             $_SESSION['username']=$name;

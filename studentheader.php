@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="css1/dataTables.bootstrap5.min.css" />
     <link rel="stylesheet" href="css1/style.css" />
-    <title> Admin Dashboard</title>
+    <title> Student Dashboard</title>
   </head>
   <body>
     <!-- top navigation bar -->
@@ -31,7 +31,7 @@
         <a
           class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold"
           href="adminhome.php"
-          >Admin</a
+          >Student</a
         >
         <button
           class="navbar-toggler"
@@ -97,7 +97,7 @@
               </div>
             </li>
             <li>
-              <a href="adminhome.php" class="nav-link px-3 active">
+              <a href="#" class="nav-link px-3 active">
                 <span class="me-2"><i class="bi bi-speedometer2"></i></span>
                 <span>Dashboard</span>
               </a>
@@ -108,8 +108,8 @@
                 Interface
               </div>
             </li>
-            <li>
-              <!-- <a
+            <li> -->
+              <<a
                 class="nav-link px-3 sidebar-link"
                 data-bs-toggle="collapse"
                 href="#layouts"
@@ -122,7 +122,7 @@
                   </span>
                 </span>
               </a>
- -->              <!-- <div class="collapse" id="layouts">
+ -->             <!--  <div class="collapse" id="layouts">
                 <ul class="navbar-nav ps-3">
                   <li>
                     <a href="admission.php" class="nav-link px-3">
@@ -133,9 +133,9 @@
                     </a>
                   </li>
                 </ul>
-              </div>
+              </div> -->
             </li> -->
-            <!-- <li>
+            < <li>
               <a href="#" class="nav-link px-3">
                 <span class="me-2"><i class="bi bi-book-fill"></i></span>
                 <span>Pages</span>
@@ -160,38 +160,11 @@
               </a>
             </li>
           </ul>
-          
- -->       
+ 
 
-<div>
-  <a href="admission.php" class="nav-link px-3">Admission</a>
-</div>
-
-<div>
-  <a href="add_student.php" class="nav-link px-3">Add Student</a>
-</div>
-
-<div>
-  <a href="view_student.php" class="nav-link px-3">View Student</a>
-</div>
-
-<div>
-  <a href="" class="nav-link px-3">Add Teacher</a>
-</div>
-
-<div>
-  <a href="complain.php" class="nav-link px-3">Complains</a>
-</div>
-
-<div>
-  <a href="" class="nav-link px-3">Add Courses</a>
-</div>
-<div>
-  <a href="" class="nav-link px-3">View Courses</a>
-</div>
 </nav>
       </div>
     </div>
-    
+ - 
 </body>
 </html>

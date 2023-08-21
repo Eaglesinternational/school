@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: #f5abc9;
+    /* background: #f5abc9; */
     color: gray;
 }
 
@@ -17,11 +17,12 @@ body{
 .center{
     resize: none;
     height: 100px;
-}
+}/* 
 form{
-   
+    background: rgba(77, 181, 255, 0.4);
+     
     padding: 5px;
-}
+} */
 footer{
     background: black;
     margin-top: 10px;
@@ -40,6 +41,7 @@ footer{
 }
 .form_deg{
     padding: 200px;
+}
 }
 label{
     display: inline-block;
@@ -72,18 +74,18 @@ label{
     width: 80%;
     border-radius: 5px;
 } */
-
+/* 
 .get
 {background: #f0f2f5;
     width: 100%;
     border-radius: 20px;
     display: flex;
     align-items: center;
-    padding: 0 15px;
+    padding: 0 15px; */
 
 }
 
-.get label{
+/* .get label{
     width: 14px;
 }
 .get input{
@@ -92,17 +94,35 @@ label{
     padding: 8px;
     outline: none;
     border: 0;
-}
+} */
 
-.get textarea{
+/* .get textarea{
     width: 100%;
     background: transparent;
     padding: 8px;
     outline: none;
     border: 0;
+} */
+
+
+input, textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 2px solid rgba(77, 181, 255, 0.4);
+    resize: none;
+    color: #fff;
+} */
+.he{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 2px solid rgba(77, 181, 255, 0.4);
+    resize: none;
+    color: #fff;
 }
-
-
 
 Additional CSS codes
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');

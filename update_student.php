@@ -21,7 +21,7 @@ elseif($_SESSION['usertype']=='student'){
 
 $id=$_GET['student_id'];
 
-$sql ="SELECT * FROM user WHERE id = '$id' ";
+$sql ="SELECT * FROM users WHERE id = '$id' ";
 
 $result = mysqli_query($data, $sql);
 
@@ -32,15 +32,20 @@ if(isset($_POST['update'])){
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $password = $_POST['password'];
+    $class = $_POST['class'];
+    $term = $_POST['term'];
+    $sess = $_POST['session'];
+    $stud = $_POST['student'];
 
 
-    $query = "UPDATE user SET username='$name' , email='$email', phone='$phone', password='$password' WHERE id='$id'   ";
+    $query = "UPDATE users SET student_name ='$stud', username='$name' , email='$email', phone='$phone', password='$password', class='$class', term='$term', session='$sess' WHERE id='$id'   ";
 
     $result2 =mysqli_query($data, $query);
 
     if($result2){
-
-        header("location:view_student.php");
+      echo "Update Successful";
+    
+        /* header("location:view_student.php"); */
 
        /*  echo "<script type=text/javascript> alert('Update Successful') </script>"; */
 
@@ -77,6 +82,10 @@ if(isset($_POST['update'])){
                 <div>
                     <h3 class="text-center mt-3">Add Student</h3>
                 </div>
+                <div  class="get p-2 m-2">
+                    <label for="">Student name</label>
+                    <input type="phone" class="form-control" name="student" value="<?php echo  "{$info['student_name']}"; ?>">
+                </div>
                 <div class="get p-2 m-2">
                     <label for="">Username</label>
                     <input type="text" class="form-control" name="name" value="<?php echo  "{$info['username']}"; ?>">
@@ -93,6 +102,18 @@ if(isset($_POST['update'])){
                 <div  class="get p-2 m-2">
                     <label for="">Password</label>
                     <input type="text" class="form-control" name="password" value="<?php echo  "{$info['password']}"; ?>">
+                </div>
+                <div  class="get p-2 m-2">
+                    <label for="">Class</label>
+                    <input type="text" class="form-control" name="class" value="<?php echo  "{$info['class']}"; ?>">
+                </div>
+                <div  class="get p-2 m-2">
+                    <label for="">Term</label>
+                    <input type="text" class="form-control" name="term" value="<?php echo  "{$info['term']}"; ?>">
+                </div>
+                <div  class="get p-2 m-2">
+                    <label for="">Session</label>
+                    <input type="text" class="form-control" name="session" value="<?php echo  "{$info['session']}"; ?>">
                 </div>
                 
                 <div>

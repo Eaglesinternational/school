@@ -1,0 +1,16 @@
+.remark{
+    border: 2px solid black;
+}
+.para{
+    display: flex;
+    gap: 9rem;
+    overflow: hidden;
+    margin-left: 5px;
+}
+.table{
+    border: 1px solid black;
+}
+.head{
+    display: flex;
+    gap: 3rem;
+}

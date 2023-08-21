@@ -21,6 +21,10 @@ if(isset($_POST['add_student'])){
     $phone = $_POST['phone'];
     $pass = $_POST['password'];
     $usertype = "student";
+    $class = $_POST['class'];
+    $term = $_POST['term'];
+    $sess = $_POST['session'];
+    $stud = $_POST['student_name'];
 
     $check = "SELECT * FROM users WHERE username = '$name' ";
 
@@ -34,7 +38,7 @@ if(isset($_POST['add_student'])){
 
     else{
 
-    $sql = "INSERT INTO users (username, email, phone, usertype, password) VALUES ( '$name', '$email', '$phone', '$usertype', '$pass')";
+    $sql = "INSERT INTO users (student_name, username, email, phone, usertype, password, class, term, session) VALUES ( '$stud', '$name', '$email', '$phone', '$usertype', '$pass', '$class', '$term', '$sess')";
 
     $result = mysqli_query($data, $sql);
 
@@ -81,6 +85,10 @@ if(isset($_POST['add_student'])){
                     <h3 class="text-center mt-3">Add Student</h3>
                 </div>
                 <div class="get p-2 m-2">
+                    <label for="">Student name</label>
+                    <input type="text" class="form-control" name="student_name" value="<?php echo htmlspecialchars($name); ?>">
+                </div>
+                <div class="get p-2 m-2">
                     <label for="">Username</label>
                     <input type="text" class="form-control" name="name" value="<?php echo htmlspecialchars($name); ?>">
                 </div>
@@ -96,6 +104,18 @@ if(isset($_POST['add_student'])){
                 <div  class="get p-2 m-2">
                     <label for="">Password</label>
                     <input type="text" class="form-control" name="password" value="<?php echo htmlspecialchars($password); ?>">
+                </div>
+                <div  class="get p-2 m-2">
+                    <label for="">Class</label>
+                    <input type="text" class="form-control" name="class" value="<?php echo htmlspecialchars($class); ?>">
+                </div>
+                <div  class="get p-2 m-2">
+                    <label for="">Term</label>
+                    <input type="text" class="form-control" name="term" value="<?php echo htmlspecialchars($term); ?>">
+                </div>
+                <div  class="get p-2 m-2">
+                    <label for="">Session</label>
+                    <input type="text" class="form-control" name="session" value="<?php echo htmlspecialchars($session); ?>">
                 </div>
                 
                 <div>
